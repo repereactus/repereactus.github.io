@@ -1,0 +1,7 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Autorisation · Repère</title><link rel="stylesheet" href="style.css"></head><body><main>
+<span class="badge">REPÈRE</span><h1>Autorisation TikTok</h1>
+<p id="msg">Lecture de la réponse de TikTok…</p><p><code id="code"></code></p>
+<script>const q=new URLSearchParams(location.search);const c=q.get('code'),e=q.get('error');
+document.getElementById('msg').textContent=c?"Autorisation reçue. Copie ce code dans la conversation Claude du projet Repère (il expire dans quelques minutes) :":(e?"TikTok a refusé l'autorisation : "+e:"Aucun code reçu.");
+if(c)document.getElementById('code').textContent=c;</script>
+</main></body></html>
